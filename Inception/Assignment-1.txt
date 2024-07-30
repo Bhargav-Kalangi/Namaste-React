@@ -1,0 +1,28 @@
+1.what is Emmet?
+Emmet is a plugin or developer tool kit that helps make your work faster and substantially enhances HTML and CSS workflows.
+It comes pre-installed in VS Code and allows you to write your code quickly.
+
+2.Difference between a Library and Framework?
+Libraries provide developers with predefined functions and classes to make their work easier and boost the development process.You can integrate libraries seamlessly into existing projects to add functionality. 
+Framework, on the other hand, is like the foundation upon which developers build applications for specific platforms. Incorporating frameworks seamlessly into an existing project is impossible. Instead, frameworks should be used when starting a new project.
+
+3.What is CDN? Why do we use it?
+Content Delivery Network (CDN) links are an integral part of modern web development. CDNs are distributed networks of servers strategically placed around the world to deliver web content efficiently.
+CDN links are URLs that point to resources, such as JavaScript libraries, CSS files, or images, hosted on these CDN servers.
+
+4.Why is React known as React?
+React is a JavaScript library that helps developers to build user interfaces,React is aptly named because: It "reacts" quickly to changes without reloading the whole page
+
+5.What is crossorigin in script tag?
+The crossorigin attribute, valid on the <audio>, <img>, <link>, <script>, and <video> elements, provides support for CORS, defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element's fetched data
+
+6. What is the difference between React and ReactDOM
+React:
+Let’s create reusable pieces of UI called components.
+Helps you build user interfaces (UIs) in JavaScript.
+Makes it easy to update and show UI changes based on data.
+
+React DOM:
+Specifically deals with showing React components on web pages.
+Without ReactDOM, React wouldn’t know how to display things on a web page.
+Takes care of connecting your React code to the actual HTML on a webpage.
