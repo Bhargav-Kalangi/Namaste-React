@@ -26,3 +26,7 @@ React DOM:
 Specifically deals with showing React components on web pages.
 Without ReactDOM, React wouldn’t know how to display things on a web page.
 Takes care of connecting your React code to the actual HTML on a webpage.
+
+7.
+react.development.js - More developer friendly, readable, will take more size.
+react.production.js - Minified code that is not developer friendly as it focused on decreasing in file size, code efficiency.
