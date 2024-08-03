@@ -1,0 +1,86 @@
+1.What is `NPM`?
+Bundlers are packages, if we want to use any packages in our code we have to use a package manager.
+We use a package manager known as npm or yarn
+
+2. What is `Parcel/Webpack`? Why do we need it?
+Parcel and Webpack are both bundlers for web applications.
+They serve a crucial purpose in the development process by transforming your raw code (think of it as raw ingredients) into optimized files (the delicious meal ready to serve) that browsers can understand and display.
+
+3. What is `.parcel-cache`?
+- When we run the application, a build is created which takes some time in ms.
+- If we make any code changes and save the application, another build will be triggered which might take even less time than
+the previous build.
+- This reduction of time is due to parcel cache.
+- Parcel immediately loads the code from the cache every time there is a subsequent build.
+- On the very first build parcel creates a folder .parcelcache where it stores the caches in binary codeformat.
+- Parcel gives faster build, faster developer experience
+because of caching.
+
+4. What is `npx` ?
+It will help us to execute the packages
+
+5.What is difference between `dependencies` vs `devDependencies`
+Dependencies are the crucial packages required for your application to function in a production environment. At the same time,
+devDependencies are tools and utilities that aid in the development process but are not needed in production
+
+6.- What is Tree Shaking?
+Tree shaking is a process of removing the unwanted code that
+we do not use while developing the application.
+In computing, tree shaking is a dead code elimination
+technique that is applied when optimizing code.
+
+7. What is Hot Module Replacement?
+It means that parcel will keep a track of all the files which
+you are updating.
+There is File Watcher Algorithm (written in C++). It keeps
+track of all the files which are changing realtime and it
+tells the server to reload.
+These are all done by PARCEL
+
+8. List down your favourite 5 superpowers of Parcel and describe any 3 of them in your
+own words
+-Tree shaking (dead code elimination technique)
+-Bundlers
+-Minification
+-optimization
+-HMR (code watching Algorithm which keeps atrack on all the files , if something is updated, it will tells to browser)
+-Diagnostics
+-Error Handling
+- Differntial Bundling (Which supports to older browser versions)
+
+9.What is `.gitignore`? What should we add and not add into it?
+The files which we donot want it into the production, we usually add it in .gitignore
+
+10.What is the difference between `package.json` and `package-lock.json`
+In package. json we have information about generic version of installed packages whereas in package.lock.json we have
+information about the specific or exact version of installed packages.
+
+11.- What is `node_modules` ? Is it a good idea to push that on git?
+Which gets installed is like a database for the npm.
+Every dependency in node_module will have its package.json.
+Node modules are very heavy so we should always put this in
+git ignore.
+
+12. what is dist?
+- It keeps the files minified for us. When bundler builds the app, the build goes into a foldercalled dist.
+- The `/dist` folder contains the minimized and optimisedversion the source code.
+- Along with the minified code, the /dist folder also comprises of all the compiled modules that may or may not be used with other systems.
+- When we run command:
+npx parcel index.html
+- This will create a faster development version of our project
+and serves it on the server.
+- When I tell parcel to make a production build:
+npx parcel build index.html
+
+13. Browserslist?
+Browserslist is a tool that specifies which browsers should
+be supported/compatible in your frontend app.
+It makes our code compatible for a lot of browsers.
+In package.json file do:
+'browserslist':[
+    'last 2 versions'
+]
+
+
+
+
