@@ -1,0 +1,15 @@
+1. What is JSX?
+JSX is HTML-like or XML-like syntax. JSX stands for JavaScript XML. It's a syntax extension for JavaScript.
+JavaScript engine cannot understand JSX as it only understands ECMAScript
+
+2 Superpowers of JSX
+Babel is a package that is a compiler/transpiler of JavaScript
+that is already present inside ‘node-modules’. It takes JSX and
+converts it into the code that browsers understand, as soon as
+we write it and save the file. It is not created by Facebook.
+
+JSX (transpiled by Babel) ⇒ React.createElement ⇒ ReactElement
+⇒ JS Object ⇒ HTML Element(render)
+
+3.Role of type attribute in script tag? What options can I use there?
+This value causes the code to be treated as a JavaScript module
