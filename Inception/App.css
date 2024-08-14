@@ -1,3 +1,48 @@
-.input-filed{
-    text-align: center;
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width:120px
+}
+
+
+.nav-items >ul{
+display: flex;
+list-style-type: none;
+padding:20px 40px;
+
+}
+.nav-items>ul>li{
+    padding:7px;
+    margin:7px
+}
+.search-data{
+    padding-top:10px;
+  
+}
+.resto-cards{
+    padding:5px;
+    display: flex;
+    flex-wrap: wrap;
+   
+
+}
+.res-cards{
+   border-radius: 8px;
+   margin: 7px;
+    width:250px;
+    
+    background-color: #f0f0f0;
+    padding:5px
+}
+.res-cards:hover{
+    cursor: pointer;
+    border:1px solid black;
+}
+.img-size{
+    border-radius: 8px;
+    width:250px;
+    height:160px;
 }
