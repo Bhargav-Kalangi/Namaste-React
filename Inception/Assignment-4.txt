@@ -1,0 +1,33 @@
+1.Is ES6 mandatory for React?
+ES6 is not mandatory for React but is highly recommendable. The latest projects created on React rely a lot on ES6. React uses ES6, and you should be familiar with some of the new features like: Classes, Arrow Functions, Variables(let, const). ES6 stands for ECMAScript 6.
+
+2.How can I write comments in JSX?
+A single-line comment, denoted by a double forward slash ( // ),
+ is used for brief explanations or annotations. Multi-line comments, wrapped between /* and */
+
+3.What is <React.Fragment></React.Fragment> and <></> ?
+A div is a regular HTML element that can be styled and affect layout, whereas a React fragment is a purely logical grouping with no impact on style or layout.
+React developers should use a div when applying CSS styles or leveraging CSS mechanisms to achieve the desired layout
+
+4.What is Virtual DOM?
+The virtual DOM is a lightweight copy of the real DOM that allows React to manage changes more efficiently by minimizing the direct manipulation required on the real DOM.
+ This process significantly enhances the performance of web apps
+
+5.What is Reconciliation in React?
+ React Reconciliation is the process through which React updates the Browser DOM. It makes the DOM updates faster in React. 
+ It updates the virtual DOM first and then uses the diffing algorithm to make efficient and optimized updates in the Real DOM.
+
+6. What is React Fiber?
+React Fiber is a powerful tool for building responsive and renderable user interfaces in React applications
+It has the ability to split work into chunks and prioritize tasks.
+
+7.Why we need keys in React? When do we need keys in React?
+A “key” is a special string attribute you need to include when creating lists of elements in React.
+ Keys are used in React to identify which items in the list are changed, updated, or deleted.
+
+ 8.Can we use index as keys in React?
+ No, it is not recommended to use index as keys, (only unique id were not present that timeonly we can use this)
+ unique id from json / api >>> index>>> no key
+
+9. What is a Config Driven UI ?
+controlling the UI using data 
