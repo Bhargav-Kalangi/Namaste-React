@@ -23,7 +23,7 @@ padding:20px 40px;
   
 }
 .resto-cards{
-    padding:5px;
+    /* padding:5px; */
     display: flex;
     flex-wrap: wrap;
    
@@ -32,7 +32,7 @@ padding:20px 40px;
 .res-cards{
    border-radius: 8px;
    margin: 7px;
-    width:250px;
+    width:220px;
     
     background-color: #f0f0f0;
     padding:5px
@@ -43,6 +43,6 @@ padding:20px 40px;
 }
 .img-size{
     border-radius: 8px;
-    width:250px;
+    width:220px;
     height:160px;
 }
