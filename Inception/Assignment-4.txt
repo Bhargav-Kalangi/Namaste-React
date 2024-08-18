@@ -27,7 +27,7 @@ A “key” is a special string attribute you need to include when creating list
 
  8.Can we use index as keys in React?
  No, it is not recommended to use index as keys, (only unique id were not present that timeonly we can use this)
- unique id from json / api >>> index>>> no key
+ unique id from json / api >>> index>>> (no key)
 
 9. What is a Config Driven UI ?
 controlling the UI using data 
