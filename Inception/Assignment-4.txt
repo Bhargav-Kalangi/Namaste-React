@@ -30,4 +30,7 @@ A “key” is a special string attribute you need to include when creating list
  unique id from json / api >>> index>>> (no key)
 
 9. What is a Config Driven UI ?
-controlling the UI using data 
+controlling the UI using data is called Config Driven UI
+
+10.Conditional Rendering?
+rendering the component based on condition
