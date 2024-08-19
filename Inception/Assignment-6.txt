@@ -1,0 +1,7 @@
+1.What is CORS?
+(Cross-Origin Resource Sharing) is a system, consisting of transmitting HTTP
+headers, that determines whether browsers block frontend JavaScript code from
+accessing responses for cross-origin requests.
+In simpler terms, CORS (Cross-Origin Resource Sharing) is a security feature
+implemented by browsers that restricts web pages from making requests to a
+different origin (domain) than the one from which it was served
