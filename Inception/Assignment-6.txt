@@ -5,3 +5,24 @@ accessing responses for cross-origin requests.
 In simpler terms, CORS (Cross-Origin Resource Sharing) is a security feature
 implemented by browsers that restricts web pages from making requests to a
 different origin (domain) than the one from which it was served
+
+2.Shimmer UI
+Shimmer UI is a better way to show loading states in your web or mobile app. It improves the user experience by providing visual feedback
+
+What is a Microservice?
+● What is Monolith architecture?
+● What is the difference between Monolith and Microservice?
+● Why do we need a useEffect Hook?
+● What is Optional Chaining?
+It is a safe way to access nested object properties even if the property doesn't exist
+● What is Shimmer UI?
+● What is the difference between JS expression and JS statement
+● What is Conditional Rendering, explain with a code example
+● What is CORS?
+
+● What is async and await?
+to make the function asynchronous , we use async keyword, async function always return an promise, inorder to resolve asynchronous operation we use await.
+
+● What is the use of `const json = await data.json();` in getRestaurants()
+
+Here we are converting the data into JSON object

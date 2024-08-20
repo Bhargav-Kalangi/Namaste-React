@@ -13,17 +13,23 @@ const Body = () => {
     APIDATA();
   });
   const APIDATA = async () => {
-    let data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=14.44840&lng=79.98880&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    let json = await data.json();
-    // console.log(json.data.cards);
-    setListOfRestCards(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setSearchFilteredData(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    try {
+      let data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=14.44840&lng=79.98880&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+      let json = await data.json();
+      // console.log(json.data.cards);
+      setListOfRestCards(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+      setSearchFilteredData(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+    } catch (e) {
+      console.log("Error occurred, api got failed");
+    }
   };
 
   return listOfRestCards.length === 0 ? (
