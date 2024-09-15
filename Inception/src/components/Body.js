@@ -4,18 +4,20 @@ import RestoCards from "./Restocards";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import resList from "../utils/resList";
+import { Link } from "react-router-dom";
 const Body = () => {
   const [listOfRestCards, setListOfRestCards] = useState([]);
   const [searchData, setSearchData] = useState("");
   const [searchFilteredData, setSearchFilteredData] = useState([]);
-
+  // console.log("helloooo");
   useEffect(() => {
     APIDATA();
-  });
+    // console.log("bhargav");
+  }, []);
   const APIDATA = async () => {
     try {
       let data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=14.44840&lng=79.98880&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=14.4425987&lng=79.98645599999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       let json = await data.json();
       // console.log(json.data.cards);
@@ -71,7 +73,9 @@ const Body = () => {
       </div>
       <div className="resto-cards">
         {searchFilteredData.map((item) => (
-          <RestoCards key={item.info.id} resData={item} />
+          <Link key={item.info.id} to={"/restaurants/" + item.info.id}>
+            <RestoCards resData={item} />
+          </Link>
         ))}
       </div>
     </div>
