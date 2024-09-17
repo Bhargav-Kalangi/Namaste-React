@@ -25,14 +25,16 @@ const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
           <li>Add to cart</li>
-          <button
-            className="login-btn"
-            onClick={() => {
-              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
-            }}
-          >
-            {btnName}
-          </button>
+          <Link to="/login">
+            <button
+              className="login-btn"
+              // onClick={() => {
+              //   btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
+              // }}
+            >
+              Login
+            </button>
+          </Link>
         </ul>
       </div>
     </div>
