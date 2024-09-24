@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import resList from "../utils/resList";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   const [listOfRestCards, setListOfRestCards] = useState([]);
   const [searchData, setSearchData] = useState("");
   const [searchFilteredData, setSearchFilteredData] = useState([]);
+  const onlinestatus = useOnlineStatus();
   // console.log("helloooo");
   useEffect(() => {
     APIDATA();
@@ -33,6 +35,7 @@ const Body = () => {
       console.log("Error occurred, api got failed");
     }
   };
+  if (onlinestatus === false) return <h1>You are offline</h1>;
 
   return listOfRestCards.length === 0 ? (
     <Shimmer />
