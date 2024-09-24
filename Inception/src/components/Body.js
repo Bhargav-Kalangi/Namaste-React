@@ -64,8 +64,8 @@ const Body = () => {
             const filteredData = listOfRestCards.filter(
               (res) => res.info.avgRating > 4.2
             );
-            setListOfRestCards(filteredData);
-            console.log(filteredData, "hellooooooooooooo");
+            setSearchFilteredData(filteredData);
+            console.log(listOfRestCards, "hellooooooooooooo");
           }}
         >
           Top Rated Restaurants
