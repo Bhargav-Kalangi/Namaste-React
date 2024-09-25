@@ -6,7 +6,6 @@ const ErrorHandling = () => {
     <div>
       <h1>Oops!!!!!!</h1>
       <h2>something went wrong!!!!</h2>
-      <h3>{error.error.message}</h3>
     </div>
   );
 };

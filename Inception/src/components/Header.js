@@ -23,8 +23,10 @@ const Header = () => {
           </li>
 
           <li>
-            {" "}
             <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/groceries">Groceries</Link>
           </li>
           <li>Add to cart</li>
           <Link to="/login">
