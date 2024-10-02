@@ -7,12 +7,13 @@ import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ErrorHandling from "./components/ErrorHandling";
 import Contact from "./components/Contact";
-import About from "./components/About";
+// import About from "./components/About";
 import RestaurantMenu from "./components/RestaurantMenu";
 import LoginForm from "./components/LoginForm";
 // import Grocery from "./components/Grocery";
 import Shimmer from "./components/Shimmer";
 const Grocery = lazy(() => import("./components/Grocery"));
+const About = lazy(() => import("./components/About"));
 const AppLayout = () => {
   return (
     <div className="app">
