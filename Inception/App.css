@@ -1,13 +1,13 @@
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
 }
 .logo {
   width: 120px;
-}
+} */
 
-.nav-items > ul {
+/* .nav-items > ul {
   display: flex;
   list-style-type: none;
   padding: 20px 40px;
@@ -20,7 +20,7 @@
   padding-top: 10px;
 }
 .resto-cards {
-  /* padding:5px; */
+ 
   display: flex;
   flex-wrap: wrap;
 }
@@ -67,14 +67,14 @@
 .App {
   display: flex;
   justify-content: center;
-}
+} */
 
-label {
+/* label {
   font-weight: bold;
   display: flex;
   margin-bottom: 5px;
-}
-
+} */
+/* 
 input[type="text"],
 input[type="email"],
 textarea {
@@ -88,9 +88,9 @@ textarea {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  /* margin-bottom: 20px; */
-}
-.LOGIN-SUBMIT {
+ 
+} */
+/* .LOGIN-SUBMIT {
   margin-top: 20px;
 }
 .form-control {
@@ -99,11 +99,15 @@ textarea {
 
 .error {
   color: red;
-}
+} */
 
-.user-card {
+/* .user-card {
   margin: 10px;
   padding: 10px;
   border: 1px solid black;
   width: 350px;
-}
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
