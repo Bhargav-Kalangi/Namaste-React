@@ -18,12 +18,17 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
       );
     });
-  console.log(categories, "hellooo categories");
+  // console.log(categories, "hellooo categories");
   return (
     <div className="text-center">
-      <h3 className="font-bold my-6">{name}</h3>
+      <h3 className="font-bold my-6 text-2xl">{name}</h3>
       {categories.map((category) => {
-        return <RestaurantCategory data={category.card.card} />;
+        return (
+          <RestaurantCategory
+            key={category.card.card.title}
+            data={category.card.card}
+          />
+        );
       })}
     </div>
   );
