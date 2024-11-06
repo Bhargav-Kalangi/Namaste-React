@@ -1,17 +1,18 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
 
-const ItemList = ({ ItemsData }) => {
-  console.log(ItemsData);
+const ItemList = ({ ItemsData, dummy }) => {
+  // console.log(ItemsData);
+  console.log(dummy, "from itemlist");
   return (
     <div>
       {ItemsData.map((item) => {
         return (
-          <div className="flex justify-between  border-gray-400 border-b-4">
-            <div
-              key={item.card.info.id}
-              className="my-auto text-left py-6 w-9/12"
-            >
+          <div
+            className="flex justify-between  border-gray-400 border-b-4"
+            key={item.card.info.id}
+          >
+            <div className="my-auto text-left py-6 w-9/12">
               <span className="font-bold text-lg">{item.card.info.name}</span>
               <p> ₹ {item.card.info.price / 100}</p>
               <p>{item.card.info.description}</p>
