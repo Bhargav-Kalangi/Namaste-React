@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import userContext from "../utils/userContext";
 
 const RestoCards = ({ resData }) => {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
     resData?.info;
+  const { loggedInUser } = useContext(userContext);
   return (
     <div className="w-[220px] m-4 p-4 bg-slate-200  rounded-lg hover:bg-slate-400 ">
       <img
@@ -14,6 +17,7 @@ const RestoCards = ({ resData }) => {
       <h4 className=" px-1">{cuisines.join(" ,")}</h4>
       <h4 className=" px-1">{costForTwo}</h4>
       <h4 className=" px-1 ">{avgRating} stars</h4>
+      <h4 className=" px-1 ">Name: {loggedInUser} </h4>
     </div>
   );
 };

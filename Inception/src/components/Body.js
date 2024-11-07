@@ -1,22 +1,25 @@
 // import resList from "../utils/resList";
 import RestoCards, { withLabelTop } from "./Restocards";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import resList from "../utils/resList";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import userContext from "../utils/userContext";
 const Body = () => {
   const [listOfRestCards, setListOfRestCards] = useState([]);
   const [searchData, setSearchData] = useState("");
   const [searchFilteredData, setSearchFilteredData] = useState([]);
   const onlinestatus = useOnlineStatus();
   const RestaurantLabel = withLabelTop(RestoCards);
-  console.log("helloooo", searchFilteredData);
+  const { loggedInUser, setUserName } = useContext(userContext);
+  // console.log("helloooo", searchFilteredData);
   useEffect(() => {
     APIDATA();
     // console.log("bhargav");
   }, []);
+
   const APIDATA = async () => {
     try {
       let data = await fetch(
@@ -77,6 +80,16 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
+        </div>
+
+        <div className="m-4">
+          <label className="p-2">Name:</label>
+          <input
+            className="border-solid border-4 border-slate-400 rounded-lg p-2 "
+            type="search"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </div>
       </div>
       <div className="flex flex-wrap">

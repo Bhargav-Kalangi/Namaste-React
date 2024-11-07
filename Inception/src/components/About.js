@@ -1,3 +1,4 @@
+import userContext from "../utils/userContext";
 import UserClass from "./UserClass";
 import React from "react";
 
@@ -6,9 +7,11 @@ class About extends React.Component {
     super(props);
     console.log("Parent constructor");
   }
+
   componentDidMount() {
     console.log("Parent componentDidMount");
   }
+
   render() {
     console.log("Parent render");
     return (
