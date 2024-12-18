@@ -15,7 +15,8 @@ import Shimmer from "./components/Shimmer";
 import userContext from "./utils/userContext";
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => import("./components/About"));
-
+import { Provider } from "react-redux";
+import { store } from "../src/redux/store";
 const AppLayout = () => {
   const [userName, setUserName] = useState(null);
   useEffect(() => {
@@ -26,10 +27,12 @@ const AppLayout = () => {
   }, []);
   return (
     <div className="app">
-      <userContext.Provider value={{ loggedInUser: userName, setUserName }}>
-        <Header />
-        <Outlet />
-      </userContext.Provider>
+      <Provider store={store}>
+        <userContext.Provider value={{ loggedInUser: userName, setUserName }}>
+          <Header />
+          <Outlet />
+        </userContext.Provider>
+      </Provider>
     </div>
   );
 };
