@@ -21,23 +21,20 @@ const Body = () => {
   }, []);
 
   const APIDATA = async () => {
-    try {
-      let data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=14.4425987&lng=79.98645599999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      );
-      let json = await data.json();
-      // console.log(json.data.cards);
-      setListOfRestCards(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-      setSearchFilteredData(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-    } catch (e) {
-      console.log("Error occurred, api got failed");
-    }
+    let data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=14.4425987&lng=79.98645599999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    let json = await data.json();
+    // console.log(json.data.cards);
+    setListOfRestCards(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setSearchFilteredData(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    // } catch (e) {
+    //   console.log("Error occurred, api got failed");
+    // }
   };
   if (onlinestatus === false) return <h1>You are offline</h1>;
 
@@ -48,8 +45,8 @@ const Body = () => {
       <div className="flex">
         <div className="m-4">
           <input
-          
             type="search"
+            data-testid="search-bar"
             value={searchData}
             onChange={(e) => {
               setSearchData(e.target.value);

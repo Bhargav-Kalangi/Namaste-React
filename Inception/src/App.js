@@ -70,10 +70,10 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <ShoppingCart />,
       },
-      {
-        path: "/login",
-        element: <LoginForm />,
-      },
+      // {
+      //   path: "/login",
+      //   element: <LoginForm />,
+      // },
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,

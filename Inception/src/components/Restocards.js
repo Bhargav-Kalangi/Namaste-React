@@ -3,11 +3,15 @@ import { CDN_URL } from "../utils/constants";
 import userContext from "../utils/userContext";
 
 const RestoCards = ({ resData }) => {
+  // console.log(resData);
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
     resData?.info;
   const { loggedInUser } = useContext(userContext);
   return (
-    <div className="w-[220px] m-4 p-4 bg-slate-200  rounded-lg hover:bg-slate-400 ">
+    <div
+      className="w-[220px] m-4 p-4 bg-slate-200  rounded-lg hover:bg-slate-400 "
+      data-testid="resCards"
+    >
       <img
         className="w-48 h-32 rounded-lg    "
         src={CDN_URL + cloudinaryImageId}
@@ -24,6 +28,7 @@ const RestoCards = ({ resData }) => {
 //HOC
 export const withLabelTop = (RestoCards) => {
   return (props) => {
+    // console.log(props);
     return (
       <div>
         <label className="absolute bg-black text-white p-3 m-3 rounded-lg">
