@@ -34,7 +34,7 @@ const LoginForm = () => {
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
-        <div className="form-control">
+        <div className="mb-3">
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -42,6 +42,7 @@ const LoginForm = () => {
             name="name"
             onChange={formik.handleChange}
             values={formik.values.name}
+            className="border-solid border-4 border-slate-400 rounded-lg p-2"
           />
           {formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
@@ -55,6 +56,7 @@ const LoginForm = () => {
             name="email"
             onChange={formik.handleChange}
             values={formik.values.email}
+            className="border-solid border-4 border-slate-400 rounded-lg p-2"
           />
 
           {formik.errors.email ? (
@@ -62,7 +64,10 @@ const LoginForm = () => {
           ) : null}
         </div>
 
-        <button type="submit" className="LOGIN-SUBMIT">
+        <button
+          type="submit"
+          className="mt-3 text-center bg-blue-500 hover:bg-blue-700 text-white font-bold  p-1 border border-blue-700 rounded"
+        >
           Submit
         </button>
       </form>

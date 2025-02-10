@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-
+import ShoppingCart from "./components/ShoppingCart";
 import Header from "./components/Header";
 import { useState, useEffect } from "react";
 import Body from "./components/Body";
@@ -65,6 +65,10 @@ const router = createBrowserRouter([
             <Grocery />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: <ShoppingCart />,
       },
       {
         path: "/login",
