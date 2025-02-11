@@ -7,7 +7,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex, dummy }) => {
     setShowIndex();
     setShowData(!showData);
   };
-  console.log(dummy, "from restaurabt category");
+  // console.log(dummy, "from restaurabt category");
   return (
     <div>
       <div className="w-6/12 mx-auto shadow-2xl bg-gray-200 my-8 p-6  rounded-md">

@@ -4,8 +4,6 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cartSlice";
 
 const ItemList = ({ ItemsData, dummy }) => {
-  // console.log(ItemsData);
-  // console.log(dummy, "from itemlist");
   const dispatch = useDispatch();
   const handleAddProducts = (item) => {
     dispatch(addItem(item));
@@ -17,6 +15,7 @@ const ItemList = ({ ItemsData, dummy }) => {
           <div
             className="flex justify-between  border-gray-400 border-b-4"
             key={item.card.info.id}
+            data-testid="foodItems"
           >
             <div className="my-auto text-left py-6 w-9/12">
               <span className="font-bold text-lg">{item.card.info.name}</span>
